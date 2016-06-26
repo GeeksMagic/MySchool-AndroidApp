@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/WizardPageContainer"
+    android:gravity="center_vertical">
+
+    <TextView style="@style/WizardPageTitle" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:gravity="left|center_vertical"
+        android:hint="Enter Your Name"
+        android:inputType="text"
+        android:maxLength="10"
+        android:paddingLeft="10dp"
+        android:paddingStart="20dp"
+        app:met_baseColor="@color/black"
+        app:met_bottomTextSize="@dimen/error_size"
+        app:met_errorColor="@color/edittext_error"
+        app:met_floatingLabelPadding="@dimen/floating_padding"
+        app:met_primaryColor="@color/grey_text"
+        app:met_singleLineEllipsis="true"
+        app:met_textColor="@color/black"
+        app:met_textColorHint="@color/edit_text_grey" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:gravity="left|center_vertical"
+        android:hint="Enter Phone Number"
+        android:inputType="number"
+        android:maxLength="10"
+        android:paddingLeft="10dp"
+        android:paddingStart="20dp"
+        app:met_baseColor="@color/black"
+        app:met_bottomTextSize="@dimen/error_size"
+        app:met_errorColor="@color/edittext_error"
+        app:met_floatingLabelPadding="@dimen/floating_padding"
+        app:met_primaryColor="@color/grey_text"
+        app:met_singleLineEllipsis="true"
+        app:met_textColor="@color/black"
+        app:met_textColorHint="@color/edit_text_grey" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/email_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:gravity="left|center_vertical"
+        android:hint="Enter Email ID"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:paddingStart="20dp"
+        app:met_baseColor="@color/black"
+        app:met_bottomTextSize="@dimen/error_size"
+        app:met_errorColor="@color/edittext_error"
+        app:met_floatingLabelPadding="@dimen/floating_padding"
+        app:met_primaryColor="@color/grey_text"
+        app:met_singleLineEllipsis="true"
+        app:met_textColor="@color/black"
+        app:met_textColorHint="@color/edit_text_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Remaining Balance : "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#424242"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/remaining_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="--"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#424242"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/previous"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_green_selector"
+            android:padding="10dp"
+            android:text="BACK"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/make_payment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_green_selector"
+            android:padding="10dp"
+            android:text="Make Payment"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+</LinearLayout>

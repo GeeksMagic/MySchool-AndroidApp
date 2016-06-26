@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_student"
+            android:icon="@drawable/ic_assignment_ind_black_24dp"
+            android:title="Student Details" />
+        <item
+            android:id="@+id/nav_test_marks"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="Test Marks Details" />
+        <item
+            android:id="@+id/nav_time_table"
+            android:icon="@drawable/ic_access_time_black_24dp"
+            android:title="Class Time Table" />
+        <item
+            android:id="@+id/nav_fee"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+            android:title="Fee Details" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
+            android:title="Logout" />
+    </group>
+</menu>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/WizardPageContainer"
+    android:gravity="center_vertical">
+
+    <TextView style="@style/WizardPageTitle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Total Fee : "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#424242"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fd_balance_total_fee"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="3000.00"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#424242"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Paid Fee : "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#424242"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fd__balance_paid_fee"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="700.00"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#424242"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:background="#000000"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Balance : "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#424242"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fd__balance_fee"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="2300.00"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#424242"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:background="#000000"></View>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="60"
+            android:gravity="right"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Enter Amount To Pay "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#424242"
+            android:textStyle="bold" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/entered_amount_to_apy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="40"
+            android:gravity="left|center_vertical"
+            android:hint="Enter Amount"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:paddingStart="20dp"
+            app:met_baseColor="@color/black"
+            app:met_bottomTextSize="@dimen/error_size"
+            app:met_errorColor="@color/edittext_error"
+            app:met_floatingLabelPadding="@dimen/floating_padding"
+            app:met_primaryColor="@color/grey_text"
+            app:met_singleLineEllipsis="true"
+            app:met_textColor="@color/black"
+            app:met_textColorHint="@color/edit_text_grey" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_green_selector"
+        android:padding="10dp"
+        android:text="NEXT"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+</LinearLayout>

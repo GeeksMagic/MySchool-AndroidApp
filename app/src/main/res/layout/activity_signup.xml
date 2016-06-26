@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgbg"
+    android:gravity="center_vertical"
+    tools:context=".LoginActivity">
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_green_selector"
+        android:padding="10dp"
+        android:text="SignUp"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/signup_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/signup"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:id="@+id/relative_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoview"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/roll_number"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:gravity="left|center_vertical"
+                android:hint="Student ID"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingStart="20dp"
+                app:met_baseColor="@color/black"
+                app:met_bottomTextSize="@dimen/error_size"
+                app:met_errorColor="@color/edittext_error"
+                app:met_floatingLabelPadding="@dimen/floating_padding"
+                app:met_primaryColor="@color/grey_text"
+                app:met_singleLineEllipsis="true"
+                app:met_textColor="@color/black"
+                app:met_textColorHint="@color/edit_text_grey" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/student_name"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:gravity="left|center_vertical"
+                android:hint="Student Name"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingStart="20dp"
+                app:met_baseColor="@color/black"
+                app:met_bottomTextSize="@dimen/error_size"
+                app:met_errorColor="@color/edittext_error"
+                app:met_floatingLabelPadding="@dimen/floating_padding"
+                app:met_primaryColor="@color/grey_text"
+                app:met_singleLineEllipsis="true"
+                app:met_textColor="@color/black"
+                app:met_textColorHint="@color/edit_text_grey" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/student_class"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:gravity="left|center_vertical"
+                android:hint="Student Class"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingStart="20dp"
+                app:met_baseColor="@color/black"
+                app:met_bottomTextSize="@dimen/error_size"
+                app:met_errorColor="@color/edittext_error"
+                app:met_floatingLabelPadding="@dimen/floating_padding"
+                app:met_primaryColor="@color/grey_text"
+                app:met_singleLineEllipsis="true"
+                app:met_textColor="@color/black"
+                app:met_textColorHint="@color/edit_text_grey" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/activity_login_edit_username"
+                android:hint="Password"
+                android:paddingLeft="10dp"
+                android:paddingStart="20dp"
+                android:password="true"
+                app:met_baseColor="@color/black"
+                app:met_bottomTextSize="@dimen/error_size"
+                app:met_errorColor="@color/edittext_error"
+                app:met_floatingLabelPadding="@dimen/floating_padding"
+                app:met_primaryColor="@color/grey_text"
+                app:met_singleLineEllipsis="true"
+                app:met_textColor="@color/black"
+                app:met_textColorHint="@color/edit_text_grey" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/activity_login_edit_username"
+                android:hint="Confirm Password"
+                android:paddingLeft="10dp"
+                android:paddingStart="20dp"
+                android:password="true"
+                app:met_baseColor="@color/black"
+                app:met_bottomTextSize="@dimen/error_size"
+                app:met_errorColor="@color/edittext_error"
+                app:met_floatingLabelPadding="@dimen/floating_padding"
+                app:met_primaryColor="@color/grey_text"
+                app:met_singleLineEllipsis="true"
+                app:met_textColor="@color/black"
+                app:met_textColorHint="@color/edit_text_grey" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
+
