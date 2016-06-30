@@ -1,12 +1,14 @@
 package com.gmt.myschool.adapters;
 
 import android.content.Context;
+import android.databinding.DataBindingUtil;
+import android.databinding.ViewDataBinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.TextView;
 
+import com.gmt.myschool.BR;
 import com.gmt.myschool.R;
 import com.gmt.myschool.database.TimeTable;
 
@@ -46,30 +48,27 @@ public class TimeTableListAdapter extends BaseAdapter {
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.time_table_list_item, null);
-            holder = new ViewHolder();
-            holder.mPeriod = (TextView) convertView.findViewById(R.id.tt_period);
-            holder.mSubject = (TextView) convertView.findViewById(R.id.tt_subject);
-            holder.mTeacher = (TextView) convertView.findViewById(R.id.tt_teacher);
-            holder.mTime = (TextView) convertView.findViewById(R.id.tt_time);
+            holder = new ViewHolder(convertView);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
         TimeTable marksCard = mTimeTableList.get(position);
-
-        holder.mPeriod.setText(""+marksCard.getPeriod());
-        holder.mSubject.setText(marksCard.getSubject());
-        holder.mTeacher.setText(marksCard.getTeacher());
-        holder.mTime.setText(marksCard.getTime());
-
+        holder.getBinding().setVariable(BR.timetable, marksCard);
+        holder.getBinding().executePendingBindings();
         return convertView;
     }
 
     class ViewHolder {
-        TextView mPeriod;
-        TextView mSubject;
-        TextView mTeacher;
-        TextView mTime;
+        private ViewDataBinding binding;
+
+        public ViewHolder(View rowView) {
+            binding = DataBindingUtil.bind(rowView);
+        }
+
+        public ViewDataBinding getBinding() {
+            return binding;
+        }
     }
 }

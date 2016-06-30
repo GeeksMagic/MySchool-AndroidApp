@@ -7,6 +7,7 @@ import com.gmt.myschool.api.response.SuperResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 /**
@@ -16,6 +17,9 @@ public interface RetrofitAPIService {
 
     @POST("users/login")
     public Call<SignInResponse> login(@Body SignInRequest request);
+
+    @GET("api/schools/all")
+    public Call<SuperResponse> getAllSchools();
 //
 //    @GET("orders/distributors/{distributorId}")
 //    public Call<OrderDataModel> ordersForDistributor(@Path("distributorId") String distributorId, @Query("startTime") long startTime, @Query("endTime") long endTime, @Query("isDigital") boolean isDigital);

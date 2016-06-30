@@ -1,73 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:gravity="center_vertical"
-    android:paddingBottom="10dp"
-    android:paddingTop="10dp"
-    android:weightSum="100">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/tt_period"
-        android:layout_width="0dp"
+    <data>
+
+        <variable
+            name="timetable"
+            type="com.gmt.myschool.database.TimeTable" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="20"
-        android:gravity="center"
-        android:padding="2dp"
-        android:text="-"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        android:textStyle="bold" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:weightSum="100">
 
-    <View
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:background="#F5F5F5"></View>
 
-    <TextView
-        android:id="@+id/tt_subject"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="30"
-        android:gravity="center"
-        android:padding="2dp"
-        android:text="-"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tt_period"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@{String.valueOf(timetable.getPeriod)}"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-    <View
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:background="#F5F5F5"></View>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#F5F5F5"></View>
 
-    <TextView
-        android:id="@+id/tt_teacher"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="30"
-        android:gravity="center"
-        android:text="-"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tt_subject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@{timetable.getSubject}"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-    <View
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:background="#F5F5F5"></View>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#F5F5F5"></View>
 
-    <TextView
-        android:id="@+id/tt_time"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="20"
-        android:gravity="center"
-        android:padding="2dp"
-        android:text="-"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/tt_teacher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:gravity="center"
+            android:text="@{timetable.getTeacher}"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#F5F5F5"></View>
+
+        <TextView
+            android:id="@+id/tt_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@{timetable.getTime}"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</layout>
